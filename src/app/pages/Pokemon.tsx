@@ -20,6 +20,7 @@ function Fill() {
   const state: {history?: HistoryType} = useStore().getState()
   const dispatch = useDispatch()
   const storePokemons = (url: string) => {
+    console.log(url)
       getLists(url)
       .then(
           (data)=> {

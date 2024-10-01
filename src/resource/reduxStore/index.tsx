@@ -1,5 +1,5 @@
 //sudah depreceted makanya perlu legacy agar tidak warning
-import { legacy_createStore as createStore, combineReducers } from 'redux';
+import { legacy_createStore, combineReducers } from 'redux';
 import playerReducer from './reducers/Player';
 import modalReducer from './reducers/Modal';
 import navReducer from './reducers/Nav';
@@ -14,7 +14,10 @@ const reducers = {
 
 const rootReducer = combineReducers(reducers);
 
-const store = createStore(rootReducer);
+const store = legacy_createStore(
+  rootReducer,
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 import { Provider } from 'react-redux';
 
