@@ -34,11 +34,16 @@ const initialPlayer: playerType = {
         item: []
     } 
   } as playerType;
-export interface ActionType {
-    type: string;
-    pokemon?: any;
-    berry?: any;
-    item?: any;
+
+  type ActionType =  {
+    type: 'ADD_TEAM' | 'REMOVE_TEAM';
+    pokemon: teamType;
+  } | {
+    type: 'ADD_BERRY' | 'USE_BERRY';
+    berry: berryType;
+  } | {
+    type: 'ADD_ITEM' | 'USE_ITEM';
+    item: itemType;
   }
 
 const playerReducer:React.Reducer<playerType, ActionType> = (state = initialPlayer, action) => {

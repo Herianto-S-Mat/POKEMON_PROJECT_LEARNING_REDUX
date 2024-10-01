@@ -8,12 +8,12 @@ function HomePage() {
   const state: {player?: playerType} = store.getState();
   return (
     <>
-      <div style={{color:'white'}}>         
+      <div>         
         <h1>Pokemon Team</h1>
         {`total pokemon ${state.player?.team.length}`}
         <Team/>
       </div>
-      <div style={{color:'white'}}>
+      <div>
         <h1>Bag Team</h1>
         <Bag/>  
       </div>

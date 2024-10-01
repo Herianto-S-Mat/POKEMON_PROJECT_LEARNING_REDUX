@@ -5,7 +5,6 @@ import pages from './app/routerPages'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ReduxProvider from './resource/reduxStore'
 
-    
 const router = createBrowserRouter(pages)
 
 createRoot(document.getElementById('root')!).render(

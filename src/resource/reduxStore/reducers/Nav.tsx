@@ -3,7 +3,7 @@ export interface ActionType {
     Value?: boolean;
   }
 
-  const navReducer: React.Reducer<Boolean, ActionType> = (state = true, action: ActionType) => {
+  const navReducer: React.Reducer<Boolean, ActionType> = (state = true, action) => {
     switch (action.type) {
         case 'SHOW':
             return true;

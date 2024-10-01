@@ -9,7 +9,19 @@ import iconPokemon from '/navbarIcon/pokemon.svg'
 import Page from '../organism/Page'
 import ItemPage from './pages/Item'
 
-const pages = [
+
+
+interface forNavBarType {
+    path:string;
+    icon:string;
+}
+
+interface pageType extends forNavBarType{
+    element:JSX.Element;
+    errorElement:JSX.Element;
+}
+
+const pages:pageType[] = [
     {
         path:'/',
         element:<Page><HomePage/></Page>,

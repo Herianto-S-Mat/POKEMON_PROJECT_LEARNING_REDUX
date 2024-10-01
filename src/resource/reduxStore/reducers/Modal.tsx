@@ -1,7 +1,7 @@
 import  {ReactNode} from "react";
 
 interface ModalType {
-    type: "pokemon" | "berry";
+    type: "pokemon" ;
     children?: ReactNode|null;
 }
 

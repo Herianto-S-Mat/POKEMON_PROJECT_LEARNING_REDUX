@@ -1,14 +1,15 @@
-export interface HistoryType {
-    Pokemons: string; 
-    Berrys: string; 
-    Items: string; 
+
+export interface HistoryType {  
+    Pokemons: `${string}/pokemon${string}`;
+    Berrys: `${string}/berry${string}`;
+    Items: `${string}/item${string}`;
   }
 
   
   const initilalHistory: HistoryType = {
-    Pokemons: `${import.meta.env.VITE_API_1}/pokemon?limit=30`,
-    Berrys: `${import.meta.env.VITE_API_1}/berry?limit=30`,
-    Items: `${import.meta.env.VITE_API_1}/item?limit=30`,
+    Pokemons: `${import.meta.env.VITE_API_1}/pokemon`,
+    Berrys: `${import.meta.env.VITE_API_1}/berry`,
+    Items: `${import.meta.env.VITE_API_1}/item`,
   }
   
   export interface ActionType {
