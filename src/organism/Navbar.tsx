@@ -6,7 +6,7 @@ import { forNavBar } from '../app/routerPages';
 import { useSelector } from 'react-redux';
 
 
-const Navbar: React.FC<null> = () => {
+const Navbar: React.FC = () => {
     const  nav = useSelector((state: { nav?: boolean }) => state.nav);
     const location:string = useLocation().pathname;
     return (

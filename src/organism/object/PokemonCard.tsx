@@ -76,7 +76,7 @@ const PokemonCard: React.FC<{data: unitObject}> = ({data}) => {
       <div style={{marginLeft: 'auto', height:'1em', position:'relative'}}>
         {
           !pokemonTeam &&
-          <img src={add} height='20' style={{position:'absolute', right:'0', top:'0'}}  onClick={() => {console.log('cloick'); dispatch({type: 'ADD_TEAM', pokemon})}}/>
+          <img src={add} height='20' style={{position:'absolute', right:'0', top:'0'}}  onClick={() => dispatch({type: 'ADD_TEAM', pokemon})}/>
         }
       </div>
       <img src={pokemon?.image.gif ?? load} alt={data.name} style={{height: '5em', margin: 'auto'}}/>

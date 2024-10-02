@@ -12,7 +12,6 @@ const options: object =  {
   }
 export const getLists = async (resource:string): Promise<Store> => {
     try {
-        console.log('masuk')
         const response = await fetch(resource, options);
         if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status}`)}
         const { next, previous, results } = await response.json();
